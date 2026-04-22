@@ -19,14 +19,17 @@ A Python-based face recognition system that automatically marks attendance using
 ```
 Face-Recognition-Attendance-System/
 │
-├── capture_images.py
-├── train_model.py
-├── recognize.py
-├── utils.py
+├── src/
+│   ├── capture_images.py
+│   ├── train_model.py
+│   ├── recognize.py
+│   └── utils.py
 ├── requirements.txt
 ├── README.md
 └── .gitignore
 ```
+
+All core source files are organized inside the `src/` directory for better modularity and maintainability.
 
 ---
 
@@ -45,19 +48,19 @@ pip install -r requirements.txt
 ### 1. Capture Images
 
 ```bash
-python capture_images.py
+python src/capture_images.py
 ```
 
 ### 2. Train Model
 
 ```bash
-python train_model.py
+python src/train_model.py
 ```
 
 ### 3. Run Attendance System
 
 ```bash
-python recognize.py
+python src/recognize.py
 ```
 
 ---
@@ -86,7 +89,8 @@ Name,Timestamp,Latitude,Longitude
 ## ⚠️ Notes
 
 * Ensure your webcam is connected
-* Dataset is not included in this repository (create your own)
+* You must capture images before training the model
+* Dataset is not included in this repository
 * Location is approximate (based on IP, not GPS)
 * Works best in good lighting conditions
 
@@ -94,7 +98,7 @@ Name,Timestamp,Latitude,Longitude
 
 ## 🛠️ Requirements
 
-* Python 3.x
+* Python 3.8+
 * OpenCV
 * NumPy
 * Geocoder
